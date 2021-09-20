@@ -1,0 +1,41 @@
+.grid {
+    height: 60vmin;
+    width: 60vmin;
+    display: grid;
+    grid-template-columns: repeat(9,1fr);
+    grid-template-rows: repeat(10,1fr);
+    border: solid black 1px;
+}
+
+
+
+.log1 {
+    background-color: brown;
+    border: solid black 1px;
+    border-right: none;
+}
+
+.log2 {
+    background-color: brown;
+    border: solid black 1px;
+    border-right: none;
+    border-left: none;
+}
+
+.log3 {
+    background-color: brown;
+    border: solid black 1px;
+    border-left: none;
+}
+
+.log4 {
+    background-color: blue;
+}
+
+.log5 {
+    background-color: blue;
+}
+
+.player {
+    background-color: green;
+}
