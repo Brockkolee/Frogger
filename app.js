@@ -9,9 +9,9 @@ logRight = document.querySelectorAll(".log-right")
 text = document.querySelector(".text")
 
 //width of gameboard
-width=9
+width=19
 //player position
-playerCurrentPostion = 85
+playerCurrentPostion = 351
 
 squares[playerCurrentPostion].classList.add("player")
 
@@ -19,19 +19,14 @@ squares[playerCurrentPostion].classList.add("player")
 function movePlayer(e) {
     //remove player current position (simulate moving away)
     squares[playerCurrentPostion].classList.remove("player")
-    switch (e.key) {
-        case "ArrowUp":
-            playerCurrentPostion-=width
-            break;
-        case "ArrowDown":
-            playerCurrentPostion+=width
-            break;
-        case "ArrowLeft":
-            playerCurrentPostion-=1
-            break;
-        case "ArrowRight":
-            playerCurrentPostion+=1
-            break;
+    if (e.key == "ArrowUp" || e.target.classList == "up") {
+        playerCurrentPostion-=width
+    } else if (e.key == "ArrowDown" || e.target.classList == "down") {
+        playerCurrentPostion+=width
+    } else if (e.key == "ArrowLeft" || e.target.classList == "left") {
+        playerCurrentPostion-=1
+    } else if (e.key == "ArrowRight" || e.target.classList == "right") {
+        playerCurrentPostion+=1
     }
     squares[playerCurrentPostion].classList.add("player")
     gameOver()
@@ -141,5 +136,7 @@ function onLog() {
 
 logId = setInterval(moveLog,500)
 document.addEventListener("keyup",movePlayer)
+document.addEventListener("mousedown",movePlayer)
+
 
 })
