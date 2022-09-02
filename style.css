@@ -1,41 +1,151 @@
+*{
+    font-family: "Poppins", sans-serif;
+}
+
 .grid {
     height: 60vmin;
     width: 60vmin;
     display: grid;
-    grid-template-columns: repeat(9,1fr);
-    grid-template-rows: repeat(10,1fr);
+    grid-template-columns: repeat(19,1fr);
+    grid-template-rows: repeat(20,1fr);
     border: solid black 1px;
+    margin: auto;
+    margin-top: 2em;
 }
 
-
+h1{
+    text-align: center;
+}
 
 .log1 {
-    background-color: brown;
+    background-color: #FFEEAF;
     border: solid black 1px;
     border-right: none;
 }
 
 .log2 {
-    background-color: brown;
+    background-color: #FFEEAF;
     border: solid black 1px;
     border-right: none;
     border-left: none;
 }
 
 .log3 {
-    background-color: brown;
+    background-color: #FFEEAF;
     border: solid black 1px;
     border-left: none;
 }
 
 .log4 {
-    background-color: blue;
+    background-color: #A5F1E9;
+    
 }
 
 .log5 {
-    background-color: blue;
+    background-color: #A5F1E9;
+
 }
 
 .player {
-    background-color: green;
+    background-color: #7FBCD2;
 }
+
+
+.control {
+    height: 10em;
+    display: flex;
+ }
+ 
+ 
+ .control > div {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+ }
+ 
+ .control > div > button {
+   height: 100%
+ }
+ 
+ button {
+    width: 5em;
+    font-family: "Poppins", sans-serif;
+ 
+ }
+ 
+ .game-control {
+    margin: auto;
+    margin-top: 0;
+ 
+ }
+ 
+ .game-control h1 {
+    text-align: center;
+ }
+ 
+
+.wrapper {
+    display: flex;
+    padding-top: 50px;
+    justify-content: center;
+ }
+ 
+ .collapsible {
+    max-width: 450px;
+    overflow: hidden;
+    font-weight: 500;
+ }
+ 
+ .collapsible input {
+    display: none;
+ }
+ 
+ .collapsible label {
+    position: relative;
+    background: #888;
+    box-shadow: 0 5px 11px rgba(0,0,0,.1), 0 4px 11px rbga(0,0,0,.8);
+    display: block;
+    color: #fff;
+    margin-bottom: 10px;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+    z-index: 1;
+ }
+ 
+ .collapsible label::after {
+    content:">";
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 15px;
+    height: 25px;
+    transition: all 0.3s ease;
+ 
+ }
+ 
+ .collapsible input:checked + label::after {
+    transform: rotate(90deg);
+    transform-origin: center;
+    transform-box: fill-box;
+ }
+ 
+ 
+ .collapsible-text {
+    max-height: 1px;
+    overflow: hidden;
+    border-radius: 4px;
+    line-height: 1.4;
+    position: relative;
+    top: -100%;
+    opacity: 0.5;
+    transition: all 0.3s ease;
+ }
+ .collapsible input:checked ~ .collapsible-text{
+    max-height: 300px;
+    padding-bottom: 25px;
+    background: #fff;
+    box-shadow: 0 5px 11px rgba(0,0,0,.1), 0 4px 11px rbga(0,0,0,.8);
+    opacity: 1;
+    top: 0;
+ }
